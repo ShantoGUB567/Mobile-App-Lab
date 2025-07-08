@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="#e0f2f7"
+    android:padding="24dp"
+    tools:context=".WelcomeActivity">
+
+    <TextView
+        android:id="@+id/converterTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Temperature Converter"
+        android:textSize="36sp"
+        android:textColor="#3F51B5"
+        android:textStyle="bold"
+        android:padding="16dp"
+        android:layout_marginBottom="30dp"/>
+
+    <!-- Temperature Input -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter Temperature:"
+        android:textSize="18sp"
+        android:textColor="#333333"
+        android:layout_marginBottom="8dp"
+        android:paddingStart="4dp"
+        android:paddingLeft="4dp"/>
+
+    <EditText
+        android:id="@+id/etTemperature"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal|numberSigned"
+        android:hint="e.g., 25"
+        android:padding="12dp"
+        android:background="@drawable/rounded_edittext_bg"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Input Unit Selection -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Input Unit:"
+        android:textSize="18sp"
+        android:textColor="#333333"
+        android:layout_marginBottom="8dp"
+        android:paddingStart="4dp"
+        android:paddingLeft="4dp"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroupInputUnit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="24dp">
+        <RadioButton
+            android:id="@+id/radioCelsiusInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Celsius (°C)"
+            android:checked="true"
+            android:textSize="16sp"
+            android:paddingEnd="16dp"
+            android:paddingRight="16dp"/>
+        <RadioButton
+            android:id="@+id/radioFahrenheitInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fahrenheit (°F)"
+            android:textSize="16sp"
+            android:paddingEnd="16dp"
+            android:paddingRight="16dp"/>
+        <RadioButton
+            android:id="@+id/radioKelvinInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kelvin (K)"
+            android:textSize="16sp"/>
+    </RadioGroup>
+
+    <!-- Output Unit Selection -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Output Unit:"
+        android:textSize="18sp"
+        android:textColor="#333333"
+        android:layout_marginBottom="8dp"
+        android:paddingStart="4dp"
+        android:paddingLeft="4dp"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroupOutputUnit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="32dp">
+        <RadioButton
+            android:id="@+id/radioCelsiusOutput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Celsius (°C)"
+            android:textSize="16sp"
+            android:paddingEnd="16dp"
+            android:paddingRight="16dp"/>
+        <RadioButton
+            android:id="@+id/radioFahrenheitOutput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fahrenheit (°F)"
+            android:checked="true"
+            android:textSize="16sp"
+            android:paddingEnd="16dp"
+            android:paddingRight="16dp"/>
+        <RadioButton
+            android:id="@+id/radioKelvinOutput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kelvin (K)"
+            android:textSize="16sp"/>
+    </RadioGroup>
+
+    <!-- Convert Button -->
+    <Button
+        android:id="@+id/btnConvert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Convert"
+        android:background="@drawable/gradient_button_primary"
+        android:textColor="#FFFFFF"
+        android:paddingVertical="16dp"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="24dp"
+        android:stateListAnimator="@null"/>
+
+    <!-- Result Display -->
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Result: "
+        android:textSize="28sp"
+        android:textColor="#333333"
+        android:textStyle="bold"
+        android:padding="10dp"/>
+
+</LinearLayout>
