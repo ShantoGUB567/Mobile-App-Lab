@@ -20,6 +20,7 @@ public class WelcomeActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         etTemperature = findViewById(R.id.etTemperature);
         radioGroupInputUnit = findViewById(R.id.radioGroupInputUnit);
         radioGroupOutputUnit = findViewById(R.id.radioGroupOutputUnit);

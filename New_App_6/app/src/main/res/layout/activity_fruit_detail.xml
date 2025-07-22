@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="#e0f2f7"
+    android:padding="24dp"
+    tools:context=".FruitDetailActivity">
+
+    <TextView
+        android:id="@+id/tvDetailFruitName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fruit Name"
+        android:textSize="36sp"
+        android:textColor="#3F51B5"
+        android:textStyle="bold"
+        android:padding="16dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginBottom="30dp"/>
+
+    <ImageView
+        android:id="@+id/ivDetailFruitImage"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scaleType="fitCenter"
+        android:background="@drawable/rounded_list_bg"
+        android:padding="16dp"
+        android:layout_marginBottom="24dp"
+        android:contentDescription="Detailed Fruit Image"
+        android:src="@drawable/placeholder_fruit"/>
+
+</LinearLayout>
