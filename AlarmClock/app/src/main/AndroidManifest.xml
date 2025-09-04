@@ -10,17 +10,13 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Contact"
-        tools:targetApi="31">
-<!--        <activity-->
-<!--            android:name=".ContactListActivity"-->
-<!--            android:exported="true">-->
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
+        android:theme="@style/Theme.AlarmClock">
+        <receiver
+            android:name=".Alarm"
+            android:enabled="true"
+            android:exported="true"></receiver>
+        <receiver android:name=".AlarmReceiver" />
 
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
-<!--        </activity>-->
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -30,7 +26,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ContactListActivity" />
     </application>
 
 </manifest>
